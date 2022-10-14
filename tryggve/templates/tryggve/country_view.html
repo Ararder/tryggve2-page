@@ -1,0 +1,63 @@
+{% extends "tryggve/base.html" %}
+{% block content %}
+{% load static %}
+<div class="container">
+  
+  <div class="row">
+    <div class="col text-center mt-5"> 
+      <h1> Meet the team in {{ country_name }}</h1>
+    </div>
+  </div>
+
+
+  <div class="row row-cols-1">
+    <div class="col d-flex">  
+    <div class="card h-100 border-white mt-5 mx-auto text-center">
+      <img src="{{teamlead.image}}" class="img-fluid mx-auto" alt="..." style="width: 250px; height: 250x;">
+
+      <div class="card-body">
+        <div class="card-title">
+          <b> {{ teamlead.first_name}} {{ teamlead.last_name}}</b>
+        </div>
+        
+        <div class="card-subtitle">
+          <b>Teamleader: </b> {{ teamlead.description }}
+        </div>
+
+        <div class="card-text mt-2">
+            {{ teamlead.affliation}}
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-5">  
+    {% for person in tp %}
+    <div class="col">
+      <div class="card h-100 border-white mt-5 text-center">
+        <img src="{{person.image}}" class="img-fluid mx-auto" alt="..." style="width: 250px; height: 250x;">
+        <div class="card-body">
+          
+          <div class="card-title">
+            <b>{{ person.first_name}} {{ person.last_name}}</b>
+          </div>
+          
+          <div class="card-subtitle">
+            {{ person.description }}
+          </div>
+
+          <div class="card-text mt-2">
+              {{ person.affliation}}
+          </div>
+
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+{% endblock content %}
+  

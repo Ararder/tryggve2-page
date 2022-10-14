@@ -1,0 +1,37 @@
+{% extends "tryggve/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container"> 
+    <div class="row">
+        
+        <div class="col-5 mt-5 text-md-center"><br><br><br>
+    
+            <h1> Tryggve </h1>
+            <h3><i><b> Trans-Nordic collaboration on sensitive register and genomic data </b></i></h3><br><br><br>
+            <a href="{% url 'country-view' 1 %}">
+                <img src="{% static 'tryggve/sweden.svg' %}" class="cimg" alt="...">
+            </a>
+            <a href="{% url 'country-view' 2 %}">
+                <img src="{% static 'tryggve/denmark.svg' %}" class="cimg" alt="...">
+            </a>
+            <a href="{% url 'country-view' 3 %}">
+                <img src="{% static 'tryggve/norway.png' %}" class="cimg" alt="...">
+            </a>
+            <a href="{% url 'country-view' 4 %}">
+                <img src="{% static 'tryggve/iceland.svg' %}" class="cimg" alt="...">
+            </a>
+        </div>
+            
+            
+        <div class="col-7 hero mb-5", id="hero"></div>
+    </div>
+</div>
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col" style="background-color: aquamarine; height: 10rem;">
+        
+        </div>
+    </div>
+</div> -->
+{% endblock content %}

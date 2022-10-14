@@ -1,0 +1,106 @@
+<!-- navbar -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tryggve</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'tryggve/style.css' %}">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-5">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-3" href="{% url 'tryggve-view' %}">
+        <img src="https://neic.no/assets/images/news/Tryggve_logo_fingerprint_small.png" alt="" width="150" height="100">
+        </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'about-view' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'resources-view' %}">Resources</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Teams
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'country-view' 1 %}"> Sweden</a></li>
+              <li><a class="dropdown-item" href="{% url 'country-view' 2 %}"> Denmark</a></li>
+              <li><a class="dropdown-item" href="{% url 'country-view' 3 %}"> Norway</a></li>
+              <li><a class="dropdown-item" href="{% url 'country-view' 4 %}"> Estonia</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'infrastructure-view' %}">Infrastucture</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'funding-view' %}">Funding</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'projects-view' %}">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'news-view' %}">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'jobs-view' %}">Job openings</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+  
+<!-- First Background image -->
+<br><br>
+{% block content %}
+
+{% endblock %}
+
+
+  
+  
+
+<!-- sticky bottom with university logos -->
+<br><br><br><br><br><br>
+<div class="container bg-white">
+  <div class="row">
+
+    <div class="col">
+      <img src="{% static 'tryggve/ki_logo.png' %}" class="thumbnail"alt="...">
+    </div>
+
+    <div class="col">
+      <img src="{% static 'tryggve/fgi_logo.svg' %}" class="thumbnail" alt="...">
+    </div>
+
+    <div class="col">
+      <img src="{% static 'tryggve/denmark_logo.jpg' %}" class="thumbnail"  alt="...">
+    </div>
+
+
+
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="footer">
+      <h6> </h6>
+      </div>
+  </div>
+</div>

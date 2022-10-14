@@ -1,0 +1,53 @@
+
+/* custom box for displaying bootstrap system */
+
+h1 {
+    padding-bottom: 60px;
+
+}
+.img-thumbnail {
+    border: 0;
+    width: 160px;
+    height: 150px;
+    margin: auto;    
+    display: block;
+}
+
+.cimg {
+    border: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.hero {
+    padding-bottom: 45%; /* = ( 600 / 1600 ) x 100 */
+    background-image: url('tryggve_map.png');
+    background-size: cover;
+  }
+
+
+
+.country-flag {
+    width: 200px;
+}
+
+.cs {
+    background-color: rgba(53, 89, 131, 0.504);
+}
+
+.footer {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  height: 8rem;
+  width: 100%;
+  background-color: rgba(53, 89, 131, 0.504);
+  text-align: center;
+}
+
+
+.thumbnail {
+    max-width: 100%;
+    height: 8rem;
+
+}
